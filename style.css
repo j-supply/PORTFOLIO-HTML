@@ -1,0 +1,432 @@
+/* ==========================================================================
+   GLOBAL
+   Used on every page
+   ========================================================================== */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Back button */
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 8px 24px;
+  background: #c0c0c0;
+  border: 2px outset #eeeeee;
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  transition: transform 0.1s;
+}
+
+.back-button:hover,
+.back-button:active {
+  transform: scale(0.95);
+}
+
+.back-button:active {
+  border-style: inset;
+}
+
+
+/* ==========================================================================
+   ENTER PAGE
+   index.html
+   ========================================================================== */
+
+.enter-page {
+  background: black;
+}
+
+.enter-page main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+}
+
+/* Name and buttons */
+
+.enter-text {
+  text-align: center;
+}
+
+.enter-text h1 {
+  margin: 0 0 20px;
+}
+
+.enter-text h1 img {
+  display: block;
+  width: 50vw;
+  image-rendering: pixelated;
+}
+
+.enter-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.enter-buttons a {
+  flex: 1;
+  padding: 8px 0;
+  background: #c0c0c0;
+  border: 2px outset #eeeeee;
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.1s;
+}
+
+.enter-buttons a:hover,
+.enter-buttons a:active {
+  transform: scale(0.95);
+}
+
+.enter-buttons a:active {
+  border-style: inset;
+}
+
+/* Logo */
+
+.enter-logo {
+  position: relative;
+  top: -3vw;
+  width: 36vw;
+  image-rendering: pixelated;
+}
+
+/* ==========================================================================
+   ABOUT PAGE
+   about.html
+   ========================================================================== */
+
+.about-text {
+  width: 50vw;
+  color: #b3b3b3;
+  text-align: left;
+}
+
+.about-text p {
+  margin: 0 0 20px;
+  font-size: 18px;
+  line-height: 1.4;
+    text-align: justify;
+
+}
+
+.about-text .back-button {
+  margin-bottom: 0;
+}
+
+@media (max-width: 750px) {
+  .about-text {
+    width: 82vw;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 750px) {
+  .enter-page main {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  .enter-logo {
+    top: 0;
+    width: 70vw;
+  }
+
+  .enter-text h1 img {
+    width: 82vw;
+  }
+
+  .enter-buttons {
+    gap: 8px;
+  }
+
+  .enter-buttons a {
+    font-size: 13px;
+  }
+}
+
+
+/* ==========================================================================
+   PROJECTS PAGE
+   projects.html
+   ========================================================================== */
+
+.projects-page {
+  background: black;
+  color: white;
+}
+
+.projects-page main {
+  padding: 30px;
+}
+
+.projects-page h1 {
+  margin: 0 0 8px;
+}
+
+.projects-title {
+  display: block;
+  width: 270px;
+  image-rendering: pixelated;
+}
+
+/* Category navigator */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 30px;
+  margin-bottom: 24px;
+}
+
+.filters button {
+  padding: 0;
+  background: none;
+  border: none;
+  color: #808080;
+  font-family: inherit;
+  font-size: 22px;
+  letter-spacing: -0.03em;
+  cursor: pointer;
+}
+
+.filters span {
+  text-decoration: underline;
+}
+
+.filters sup {
+  font-size: 12px;
+}
+
+.filters button:hover,
+.filters button.active {
+  color: #5a66ff;
+}
+
+/* List */
+
+.project-row {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  margin: 0 -30px 0 -5px;
+  padding: 0 5px;
+  color: white;
+  font-size: 28px;
+  letter-spacing: -0.03em;
+  line-height: 35px;
+  text-decoration: none;
+}
+
+.project-head {
+  margin-bottom: 24px;
+}
+
+.project-list a:hover,
+.project-list a:active {
+  background: #8080ff;
+}
+
+
+/* Mobile */
+
+@media (max-width: 750px) {
+  .projects-page main {
+    padding: 20px;
+  }
+
+  .projects-title {
+    width: 200px;
+  }
+
+  .filters button {
+    font-size: 18px;
+  }
+
+  .project-row {
+    grid-template-columns: 2fr 1fr;
+    margin-right: -20px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+/* ==========================================================================
+   PROJECT SHOWCASE PAGES
+   Individual project pages, such as aero-mirrors.html
+   ========================================================================== */
+
+.showcase-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.showcase-main .back-button {
+  align-self: flex-start;
+}
+
+.showcase-header {
+  margin-bottom: 50px;
+}
+
+/* Text and photos */
+
+.showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 46px;
+  align-items: start;
+}
+
+.showcase-text h1 {
+  margin: 0 0 24px;
+  font-size: 44px;
+  font-weight: normal;
+  letter-spacing: -0.04em;
+}
+
+.showcase-text p {
+  margin: 0 0 25px;
+  font-size: 19px;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+  text-align: justify;
+}
+
+.showcase-text .showcase-year {
+  margin-bottom: 36px;
+  font-size: 24px;
+}
+
+.showcase-text .showcase-links {
+  margin-top: 75px;
+  text-align: left;
+}
+
+.showcase-links a {
+  display: block;
+  color: #5a66ff;
+  overflow-wrap: anywhere;
+}
+
+.showcase-photos img {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.showcase-caption {
+  margin: 0;
+  font-size: 15px;
+  font-style: italic;
+  letter-spacing: -0.03em;
+}
+
+/* Prev and Next links */
+
+.project-nav {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: auto -30px -30px;
+  padding: 20px 30px;
+  background: black;
+}
+
+.project-nav a {
+  color: #5a66ff;
+  font-size: 19px;
+  letter-spacing: -0.03em;
+}
+
+.project-nav a:hover,
+.project-nav a:active {
+  color: #8080ff;
+}
+
+/* Mobile */
+
+@media (max-width: 750px) {
+  .showcase-header {
+    margin-bottom: 30px;
+  }
+
+  .showcase {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .showcase-text h1 {
+    font-size: 34px;
+  }
+
+  .showcase-text .showcase-links {
+    margin-top: 40px;
+  }
+
+  .project-nav {
+    margin: auto -20px -20px;
+    padding: 16px 20px;
+  }
+}
+/* Mobile */
+
+@media (max-width: 750px) {
+  .showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-text {
+    position: static;
+    padding-right: 0;
+  }
+
+  .project-nav {
+    margin: auto -20px -20px;
+    padding: 12px 20px;
+  }
+}
+
+
+/* ==========================================================================
+   FOOTER
+   Used on every page
+   ========================================================================== */
+
+footer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 20px;
+  padding: 20px 30px;
+  border-top: 1px solid #c0c0c0;
+  color: #808080;
+  font-size: 14px;
+}
+
+footer a {
+  color: #5a66ff;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 750px) {
+  footer {
+    padding: 20px;
+  }
+}
